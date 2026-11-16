@@ -1,0 +1,150 @@
+/* USHUAIA · FIN DEL MUNDO | Hoja de estilos */
+:root {
+  --navy: #102b3b;
+  --deep: #0a1d29;
+  --blue: #28677b;
+  --ice: #eaf2f3;
+  --mist: #f5f7f6;
+  --gold: #d9b77b;
+  --ink: #20333d;
+  --muted: #71818a;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+body { margin: 0; color: var(--ink); font-family: 'DM Sans', sans-serif; background: #fff; }
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+h2 { font-size: clamp(2.35rem, 4.5vw, 3.7rem); line-height: 1.12; color: var(--navy); font-weight: 700; }
+h2 em, h1 em { color: #6f9eaa; font-weight: 600; }
+.site-nav { padding: 18px 0; background: rgba(8, 28, 40, .78); backdrop-filter: blur(14px); transition: .3s; }
+.navbar-brand.brand { display: flex; align-items: center; gap: 7px; color: #fff; font-weight: 700; letter-spacing: .14em; font-size: 1rem; }
+.brand-mark { color: var(--gold); font-size: 1.4rem; }
+.brand-sub { display: block; margin-left: 5px; font-size: .48rem; letter-spacing: .25em; color: #c6d5d9; align-self: end; padding-bottom: 2px; }
+.nav-link { color: rgba(255,255,255,.8) !important; font-size: .86rem; font-weight: 500; transition: .2s; }
+.nav-link:hover { color: #fff !important; }
+.nav-contact { border: 1px solid rgba(255,255,255,.45); border-radius: 50px; padding: 9px 17px !important; }
+.hero { min-height: 760px; height: 100vh; max-height: 980px; position: relative; display: flex; align-items: center; color: white; background: url('https://commons.wikimedia.org/wiki/Special:FilePath/Beagle-Kanal_Ushuaia.JPG?width=2000') center 48%/cover no-repeat; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,20,31,.83) 0%, rgba(7,26,39,.54) 48%, rgba(7,26,39,.12) 100%), linear-gradient(0deg, rgba(5,20,31,.38), transparent 55%); }
+.hero-content { position: relative; z-index: 1; padding-top: 60px; }
+.eyebrow { color: #b9d1d7; font-size: .72rem; font-weight: 700; letter-spacing: .23em; margin-bottom: 20px; }
+.eyebrow span { display: inline-block; width: 25px; height: 1px; background: var(--gold); vertical-align: middle; margin-right: 8px; }
+.hero h1 { font-size: clamp(3.3rem, 7.5vw, 6.8rem); line-height: .99; letter-spacing: -.035em; max-width: 850px; margin-bottom: 25px; }
+.hero h1 em { color: #d7e6e9; }
+.hero-copy { color: rgba(255,255,255,.82); font-size: 1.1rem; max-width: 520px; margin-bottom: 34px; }
+.btn { font-weight: 600; font-size: .9rem; transition: transform .25s, box-shadow .25s; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.16); }
+.hero-note { margin-top: 76px; font-size: .66rem; letter-spacing: .22em; color: rgba(255,255,255,.7); }
+.note-line { display: inline-block; width: 38px; height: 1px; background: var(--gold); vertical-align: middle; margin-right: 12px; }
+.scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: #fff; text-decoration: none; font-size: 1.7rem; animation: bob 1.8s infinite; }
+@keyframes bob { 50% { transform: translate(-50%, 8px); } }
+.section { padding: 110px 0; }
+.intro-section { background: #fff; }
+.dark-eyebrow { color: #75929b; }
+.intro-section h2 { margin-bottom: 25px; }
+.lead-copy { font-size: 1.13rem; line-height: 1.8; color: #3f5964; }
+.body-copy { color: var(--muted); line-height: 1.85; font-size: .96rem; }
+.facts-row { display: flex; gap: 35px; border-top: 1px solid #dfe7e8; margin-top: 32px; padding-top: 25px; }
+.facts-row div { display: flex; flex-direction: column; gap: 4px; }
+.facts-row strong { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--blue); }
+.facts-row span { font-size: .68rem; color: #83939a; }
+.intro-photo-wrap { position: relative; padding: 0 0 30px 30px; }
+.intro-photo-wrap::before { content: ''; position: absolute; left: 0; bottom: 0; width: 72%; height: 75%; border: 1px solid var(--gold); }
+.intro-photo { position: relative; z-index: 1; width: 100%; height: 490px; object-fit: cover; box-shadow: 0 22px 55px rgba(16,43,59,.17); }
+.photo-label { position: absolute; z-index: 2; bottom: 0; right: 0; padding: 15px 22px; background: var(--navy); color: white; font-size: .78rem; letter-spacing: .06em; }
+.photo-label span { color: var(--gold); margin-right: 8px; }
+.experiences-section { background: var(--mist); }
+.section-heading { max-width: 720px; margin: 0 auto 55px; }
+.section-heading h2 { margin-bottom: 17px; }
+.section-heading > p:last-child { color: var(--muted); }
+.experiences-section .eyebrow, .quote-band .eyebrow, .planner-section .eyebrow { color: #8db0b9; }
+.place-card { height: 100%; background: white; border: 1px solid #e6ecec; transition: .35s; overflow: hidden; }
+.place-card:hover { transform: translateY(-8px); box-shadow: 0 20px 45px rgba(16,43,59,.12); }
+.place-image { height: 245px; position: relative; overflow: hidden; background: #dce7e9; }
+.place-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s; }
+.place-card:hover .place-image img { transform: scale(1.06); }
+.place-number { position: absolute; bottom: 15px; left: 18px; color: white; font-family: 'Playfair Display', serif; font-size: 1.35rem; text-shadow: 0 2px 8px #000; }
+.place-info { padding: 25px 25px 27px; }
+.place-tag { color: #7b9ca5; font-size: .62rem; letter-spacing: .18em; font-weight: 700; }
+.place-info h3 { font-size: 1.45rem; color: var(--navy); margin: 10px 0 12px; }
+.place-info p { color: #74858c; font-size: .88rem; line-height: 1.75; min-height: 92px; }
+.place-info a { color: var(--blue); font-size: .82rem; text-decoration: none; font-weight: 700; }
+.place-info a span { margin-left: 5px; transition: .2s; }
+.place-info a:hover span { margin-left: 10px; }
+.quote-band { padding: 100px 0; text-align: center; color: white; background: linear-gradient(rgba(8,28,40,.83), rgba(8,28,40,.88)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Beagle_Channel_seen_from_Tierra_del_Fuego_National_Park.jpg?width=1800') center/cover fixed; }
+.quote-band h2 { color: white; font-size: clamp(2.2rem, 5vw, 4.2rem); }
+.quote-band h2 em { color: #d5e3e5; }
+.gallery-section { background: white; }
+.gallery-section .section-heading { margin-left: 0; }
+.gallery-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; grid-template-rows: 230px 230px; gap: 14px; }
+.gallery-item { position: relative; overflow: hidden; display: block; background: #dce7e9; }
+.gallery-item::after { content: ''; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(4,20,30,.72)); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.gallery-item:hover img { transform: scale(1.07); }
+.gallery-item span { position: absolute; z-index: 1; bottom: 18px; left: 20px; color: white; font-size: .88rem; font-weight: 600; }
+.gallery-tall { grid-row: span 2; }
+.image-credit { color: #9aa7ac; font-size: .72rem; margin-top: 15px; }
+.planner-section { padding: 100px 0; color: white; background: var(--navy); }
+.planner-section h2 { color: white; }
+.planner-section h2 em { color: #b7d0d5; }
+.planner-section p:not(.eyebrow) { max-width: 520px; color: #b7c8ce; line-height: 1.85; }
+.calculator-card { background: #fff; color: var(--ink); padding: 35px; border-radius: 4px; box-shadow: 0 20px 60px rgba(0,0,0,.18); }
+.calculator-card h3 { font-size: 1.8rem; color: var(--navy); margin-bottom: 25px; }
+.form-label { color: #536a73; font-size: .8rem; font-weight: 700; }
+.form-control, .form-select { border: 1px solid #dce5e7; border-radius: 2px; padding: 12px 14px; font-size: .9rem; }
+.form-control:focus, .form-select:focus { border-color: #6c9aa7; box-shadow: 0 0 0 .2rem rgba(108,154,167,.15); }
+.btn-accent { background: var(--blue); border: 1px solid var(--blue); color: white; border-radius: 2px; padding: 12px 22px; }
+.btn-accent:hover { background: var(--navy); color: white; }
+.calc-result { background: var(--ice); color: var(--navy); margin-top: 18px; padding: 15px; font-weight: 700; text-align: center; }
+.contact-section { background: #f4f7f6; }
+.contact-section h2 { margin-bottom: 25px; }
+.contact-detail { display: flex; align-items: center; gap: 15px; margin-top: 25px; }
+.contact-detail > span { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid #cbd9dc; border-radius: 50%; color: var(--blue); font-size: 1.2rem; }
+.contact-detail div { display: flex; flex-direction: column; gap: 3px; }
+.contact-detail strong { color: var(--navy); font-size: .84rem; }
+.contact-detail small, .contact-detail a { color: #829198; font-size: .78rem; text-decoration: none; }
+.contact-detail a:hover { color: var(--blue); }
+.contact-form { background: white; padding: 38px; box-shadow: 0 15px 45px rgba(16,43,59,.07); }
+.form-message { margin-top: 18px; font-size: .88rem; font-weight: 600; }
+.form-message.success { color: #237354; }
+.form-message.error { color: #b54b4b; }
+.footer { padding: 35px 0 20px; background: var(--deep); color: #a8bac1; }
+.footer .brand { color: white; }
+.footer p { margin: 0; font-size: .76rem; }
+.back-top { color: #d4e1e4; text-decoration: none; font-size: .78rem; }
+.back-top:hover { color: white; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 25px; padding-top: 17px; text-align: center; color: #71858e; font-size: .7rem; }
+.visit-counter { position: fixed; z-index: 1000; bottom: 14px; right: 14px; background: rgba(9,29,41,.88); color: #e6eff0; border: 1px solid rgba(255,255,255,.18); padding: 9px 13px; border-radius: 50px; font-size: .68rem; backdrop-filter: blur(8px); }
+.visit-counter strong { color: #f0d29b; }
+@media (max-width: 991.98px) {
+  .site-nav { background: rgba(8,28,40,.96); }
+  .navbar-collapse { padding-top: 18px; }
+  .nav-link { padding: 10px 0 !important; }
+  .nav-contact { display: inline-block; padding: 9px 17px !important; margin-top: 5px; }
+  .hero { min-height: 700px; height: 88vh; }
+  .intro-photo { height: 420px; }
+}
+@media (max-width: 767.98px) {
+  .section { padding: 78px 0; }
+  .hero { min-height: 690px; background-position: 57% center; }
+  .hero h1 { font-size: clamp(3rem, 13vw, 4.8rem); }
+  .hero-copy { font-size: 1rem; }
+  .hero-note { margin-top: 55px; }
+  .facts-row { gap: 18px; justify-content: space-between; }
+  .facts-row span { font-size: .62rem; }
+  .intro-photo-wrap { padding-left: 16px; }
+  .intro-photo { height: 340px; }
+  .place-image { height: 230px; }
+  .place-info p { min-height: 0; }
+  .quote-band { padding: 75px 0; background-attachment: scroll; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 190px 190px 190px; }
+  .gallery-tall { grid-row: span 2; }
+  .calculator-card, .contact-form { padding: 25px; }
+  .footer .container:first-child { text-align: center; }
+}
+@media (max-width: 420px) {
+  .brand-sub { display: none; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; grid-template-rows: 150px 150px 150px; }
+  .gallery-item span { left: 11px; bottom: 12px; font-size: .75rem; }
+  .facts-row { gap: 10px; }
+  .facts-row strong { font-size: 1.45rem; }
+  .visit-counter { bottom: 8px; right: 8px; font-size: .6rem; }
+}
